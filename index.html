@@ -17,11 +17,11 @@
     </div>
     <form id="playerInfo" action="index.html" method="post">
       <div class="form-group">
-        <label for="">Player 1 Name</label>
+        <label for="player1">Player 1 Name</label>
         <input id= "player1" class ="form control" type="text">
       </div>
       <div class="form-group">
-        <label for="">Player 2 Name</label>
+        <label for="player2">Player 2 Name</label>
         <input id= "player2" class ="form control" type="text">
       </div>
       <button type="submit" name="button">Let's play!</button>
@@ -43,13 +43,18 @@
         <h3><span id="player2Val"></span></h3>
         <div class="box">
           <h4><span id="player2Total"></span></h4>
-          <ul>
-            <li id="player2temp"></li>
-
+          <ul id="player2temp">
           </ul>
         </div>
       </div>
-    <button type="button" id="roll">Roll!</button>
+      <div id ="player1btns">
+        <button type="button" id="roll1">Roll!</button>
+        <button type="button" id="hold1">Hold!</button>
+      </div>
+      <div id="player2btns">
+        <button type="button" id="roll2">Roll!</button>
+        <button type="button" id="hold2">Hold!</button>
+      </div>
     </div>
   </div>
 </body>
