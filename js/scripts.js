@@ -49,7 +49,8 @@ var game = new Game();
 
 
 $(document).ready(function() {
-  // var player = new Player('Ricki');
+  var newPlayer1 = "ricki";
+  var newPlayer2 = "Jamie";
 
   $("form#playerInfo").submit(function(event){
 
@@ -58,8 +59,8 @@ $(document).ready(function() {
 
     var player1NameInput = $("input#player1").val();
     var player2NameInput = $("input#player2").val();
-    var newPlayer1 = new Player(player1NameInput);
-    var newPlayer2 = new Player(player2NameInput);
+    newPlayer1 = new Player(player1NameInput);
+    newPlayer2 = new Player(player2NameInput);
     // console.log(newPlayer1);
     $("#intro").hide();
     $("#game").show();
@@ -69,13 +70,20 @@ $(document).ready(function() {
     $("#player2Val").text(player2NameInput);
     console.log(newPlayer1);
   });
-  $("button#roll").click(function(){
-    // var rand = 1 + Math.floor(Math.random() * 6)
-    // var tempTotal = rand
-    // var total = rand + tempTotal
-//     player.roll();
-// console.log(player.roll());
-    player.rollDice();
-    $("#player2temp").append('<li>' + player.tempTotal + '</li>');
+  $("button#roll1").click(function(){
+    newPlayer1.rollDice();
+    $("#player1temp").append('<li>' + newPlayer1.tempTotal + '</li>');
+  })
+  $("button#hold1").click(function(){
+    newPlayer1.hold();
+    $("#player1temp").append('<li>' + newPlayer1.tempTotal + '</li>');
+  })
+  $("button#roll2").click(function(){
+    newPlayer2.rollDice();
+    $("#player1temp").append('<li>' + newPlayer2.tempTotal + '</li>');
+  })
+  $("button#hold2").click(function(){
+    newPlayer2.hold();
+    $("#player1temp").append('<li>' + newPlayer2.tempTotal + '</li>');
   })
 });
