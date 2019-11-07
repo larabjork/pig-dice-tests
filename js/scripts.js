@@ -49,7 +49,7 @@ Player.prototype.rollDice = function () {
     function switchDisplay() {
       $("#player2deets").toggle();
       $("#player1deets").toggle();
-    }
+        }
     function winnerWinner(player) {
       if (player.tempTotal + player.permTotal >= 10){
         alert("you win");
