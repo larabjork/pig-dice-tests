@@ -19,3 +19,19 @@ h1 {
   text-align: center;
   color: pink;
 }
+
+#player2deets {
+  display: none;
+}
+
+/* #player1Total, #player2Total {
+  border-width: 3px;
+  border-style: dotted;
+  border-color: green; */
+
+}
+
+.col-md-6 {
+  background-color: lightblue;
+
+}

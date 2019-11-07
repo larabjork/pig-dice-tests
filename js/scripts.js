@@ -19,23 +19,18 @@ Player.prototype.rollDice = function () {
   //   alert("Winner!")
   // } else {
     var roll = 1 + Math.floor(Math.random() * 6);
-    console.log(this);
-    console.log('roll: ', roll);
-    console.log(typeof this.tempTotal);
-    if (roll === 1) {
-      // end round
-    } else {
-      // this.tempTotal += roll;
+    if (this.tempTotal + this.permTotal >= 100){
+      alert("you win")
+    } else if (roll !== 1) {
       this.tempTotal = this.tempTotal + roll;
-      this.newProperty = true;
-      console.log('temp total: ', this.tempTotal, roll, this.tempTotal +roll);
-    }
-    }
-  //
-  // };
+    } else {
+    switchDisplay();
+  }
+  };
 
 Player.prototype.hold = function() {
-
+  this.permTotal = this.tempTotal + this.permTotal
+  this.tempTotal = 0
 };
 
 // Player.prototype.
@@ -47,6 +42,11 @@ Player.prototype.hold = function() {
 // UI Logic
 var game = new Game();
 
+function switchDisplay() {
+  $("#player2deets").toggle();
+  $("#player1deets").toggle();
+
+}
 
 $(document).ready(function() {
   var newPlayer1 = "ricki";
@@ -76,14 +76,24 @@ $(document).ready(function() {
   })
   $("button#hold1").click(function(){
     newPlayer1.hold();
-    $("#player1temp").append('<li>' + newPlayer1.tempTotal + '</li>');
+    $("#player1Total").text(newPlayer1.permTotal);
+    $("#player1temp").hide();
+    $("#player2deets").show();
+    $("#player1deets").hide();
+    $("#player2temp").show();
+
   })
   $("button#roll2").click(function(){
     newPlayer2.rollDice();
-    $("#player1temp").append('<li>' + newPlayer2.tempTotal + '</li>');
+    $("#player2temp").append('<li>' + newPlayer2.tempTotal + '</li>');
   })
   $("button#hold2").click(function(){
     newPlayer2.hold();
-    $("#player1temp").append('<li>' + newPlayer2.tempTotal + '</li>');
+    $("#player2Total").text(newPlayer2.permTotal);
+    $("#player2temp").hide();
+    $("#player1temp").show();
+    $("#player1deets").show();
+    $("#player2deets").hide();
+
   })
 });
