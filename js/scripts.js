@@ -53,6 +53,7 @@ Player.prototype.rollDice = function () {
     function winnerWinner(player) {
       if (player.tempTotal + player.permTotal >= 10){
         alert("you win");
+          this.tempTotal = 0
         $("#intro").show();
         $("#game").hide();
       }
