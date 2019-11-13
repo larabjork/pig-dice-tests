@@ -1,4 +1,5 @@
 import {Game, Player} from './pig-dice';
+import './styles.css';
 
 var game = new Game();
 
