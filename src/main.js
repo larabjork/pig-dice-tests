@@ -3,8 +3,12 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 
+
+export function Player() {
+  
+}
 // Business Logic for Game
-function Game() {
+export function Game() {
   this.players = [];
 }
 
@@ -14,7 +18,7 @@ Game.prototype.addPlayer = function () {
 };
 
 // Business Logic for Player
-function Player(playerName) {
+ function Player(playerName) {
   this.playerName = playerName,
   this.permTotal = 0,
   this.tempTotal = 0;
