@@ -12,10 +12,18 @@ describe('Player', () =>{
     expect(player.permTotal).toEqual(0);
     expect(player.tempTotal).toEqual(0);
   });
+    describe('#hold', () =>{
+      test('should add tempTotal to permTotal', ()=>{
+        var temp = 5;
+        var perm = 2;
+        var newPerm = temp + perm;
+        expect(newPerm).toEqual(7);
+      });
+    });
     describe('#rollDice', () =>{
       test('should correctly roll a number 1-6', () =>{
         var roll = 3;
-        var roll2 =10
+        var roll2 =10;
         expect(roll).toBeGreaterThanOrEqual(1);
         expect(roll).toBeLessThanOrEqual(6);
         expect(roll2).not.toBeLessThanOrEqual(6);
