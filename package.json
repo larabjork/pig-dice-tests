@@ -1,0 +1,24 @@
+{
+  "name": "pig-dice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evawiedmann/pig-dice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evawiedmann/pig-dice/issues"
+  },
+  "homepage": "https://github.com/evawiedmann/pig-dice#readme",
+  "devDependencies": {
+    "webpack": "4.39.3",
+    "webpack-cli": "^3.3.8"
+  }
+}
