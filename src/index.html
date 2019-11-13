@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Pig Dice</title>
+</head>
+<body>
+  <div class="container" id="intro">
+    <div class="jumbotron">
+      <h1>Welcome to Pig Dice</h1>
+
+      <p>Enter your name to get started</p>
+    </div>
+    <form id="playerInfo" action="index.html" method="post">
+      <div class="form-group">
+        <label for="player1">Player 1 Name</label>
+        <input id= "player1" class ="form control" type="text">
+      </div>
+      <div class="form-group">
+        <label for="player2">Player 2 Name</label>
+        <input id= "player2" class ="form control" type="text">
+      </div>
+      <button type="submit" name="button">Let's play!</button>
+    </form>
+  </div>
+  <div class="container" id="game">
+    <h1>Time for some Pig Dick energy</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <h3><span id="player1Val"></span></h3>
+        <h4><span id="player1Total"></span></h4>
+        <div class="box">
+          <ul id="player1temp">
+          </ul>
+          <div id="player1deets">
+            <button type="button" id="roll1">Roll!</button>
+            <button type="button" id="hold1">Hold!</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h3><span id="player2Val"></span></h3>
+        <h4><span id="player2Total"></span></h4>
+        <div class="box">
+          <ul id="player2temp">
+          </ul>
+          <div id="player2deets">
+            <button type="button" id="roll2">Roll!</button>
+            <button type="button" id="hold2">Hold!</button>
+          </div>
+        </div>
+      </div>
+      <div id ="player1btns">
+      </div>
+      <div id="player2btns">
+      </div>
+    </div>
+  </div>
+</body>
+</html>

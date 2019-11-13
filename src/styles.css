@@ -1,0 +1,23 @@
+#game {
+  display:none
+}
+
+h3, h4 {
+  display: block;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  color: pink;
+}
+
+#player2deets {
+  display: none;
+}
+
+
+.col-md-6 {
+  background-color: lightblue;
+
+}
