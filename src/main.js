@@ -31,8 +31,6 @@ Player.prototype.rollDice = function () {
   } else if (roll !== 1) {
     this.tempTotal = this.tempTotal + roll;
     winnerWinner(this);
-
-
   } else {
     switchDisplay();
     winnerWinner(this);
